@@ -1,0 +1,46 @@
+<div class="parent">
+    <form action="" [formGroup]="signupform">
+        <h1>SIGN UP</h1>
+        
+        <label>
+          <input type="text" id="name" formControlName="name">
+          <span>NAME</span>
+        </label>
+
+        <label>
+            <input type="text"  formControlName="email">
+            <span>EMAIL</span>
+          </label>
+        
+        <label>
+          <input type="tel"  formControlName="ph">
+          <span>PHONE NUMBER</span>
+        </label>
+        
+        <label>
+          <input type="text"  formControlName="id">
+          <span>USER ID</span>
+        </label>
+        
+        <label>
+          <input type="password"  formControlName="pass">
+          <span>PASSWORD</span>
+        </label>
+        
+        <div class="termofuse">
+          <input type="checkbox">
+          <span>
+            By submitting this form i agree to
+            <a href="#">terms of use</a>
+          </span>
+        </div>
+        
+       <input type="submit" value="Submit" (click)="onSubmit()">
+       <div class="termofuse">
+        <span>Already have an account?
+          <a routerLink="/login">Login Here</a></span>
+      </div>
+        
+      </form>
+</div>
+

@@ -1,0 +1,47 @@
+<div class="container px-4 py-5" id="hanging-icons">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2 class="pb-2 border-bottom">Listed Products</h2>
+      <button class="btn btn-success ms-3" (click)="toggleForm()">
+        <i class="fas fa-plus-circle"></i> <b>Add Product</b>
+      </button>
+    </div>
+  
+    <div class="parent" *ngIf="isAddProduct">
+      <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <label>
+          <input type="text" id="name" formControlName="title">
+          <span>NAME</span>
+        </label>
+        <label>
+          <input type="text" formControlName="price">
+          <span>PRICE</span>
+        </label>
+        <label>
+          <input type="tel" formControlName="category">
+          <span>CATEGORY</span>
+        </label>
+        <label>
+          <input type="text" formControlName="description">
+          <span>DESCRIPTION</span>
+        </label>
+        <button type="submit" class="btn btn-primary">{{ isEditProduct ? 'Update' : 'Submit' }}</button>
+      </form>
+    </div>
+  
+    <div *ngIf="products.length === 0" class="mt-3">
+      <h5 [style.color]="'red'">No products added. Add products!</h5>
+    </div>
+  
+    <div class="row g-4 py-5">
+      <div class="col-12 col-md-6 col-lg-4 col-xl-2" *ngFor="let product of products">
+        <div class="card p-3">
+          <h3 class="fs-2 text-body-emphasis">{{product.title}}</h3>
+          <p>{{product.description}}</p>
+          <h5 class="card-title">{{"Price: $" + product.price}}</h5>
+          <a class="btn btn-success me-2" (click)="editProduct(product)">Update</a>
+          <a class="btn btn-danger" (click)="deleteProduct(product._id)">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

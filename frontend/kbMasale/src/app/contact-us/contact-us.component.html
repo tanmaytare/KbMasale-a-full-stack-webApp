@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="contact-info">
+    </div>
+    <div class="contact-form">
+      <h2>Send Us A Message</h2>
+      <form [formGroup]="contactForm">
+        <div class="form-group">
+          <label for="first-name">Tell Us Your Name*</label>
+          <div class="name-fields">
+            <input type="text" id="first-name" placeholder="First name" formControlName="firstName">
+            <input type="text" id="last-name" placeholder="Last name" formControlName="lastName">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Enter Your Email*</label>
+          <input type="email" id="email" name="email" placeholder="Eg. example@email.com" formControlName="email">
+        </div>
+        <div class="form-group">
+          <label for="phone">Enter Phone Number*</label>
+          <input type="tel" id="phone" name="phone" placeholder="Eg. +1 800 000000" formControlName="ph">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write us a message" formControlName="msg"></textarea>
+        </div>
+        <button type="submit" (click)="Onsend()" class="btn btn-primary mx-auto d-block">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- <div>
+    {{contactInfo | json}}
+  </div> -->

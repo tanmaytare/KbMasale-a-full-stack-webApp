@@ -1,0 +1,82 @@
+<section class="about-section">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-6 col-lg-6 text-wrapper">
+                <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+                    <strong>About Kalidas Masala</strong>
+                </h1>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                    Welcome to Kalidas Masala Center, where spices are not just ingredients, they're a way of life! Owned by the spice wizard Prakash Tare, we bring you the finest selection of spices and dry fruits that will make your taste buds sing and your dishes dance.
+                </p>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                    Our mission? To turn your kitchen into a flavor factory! Whether you're a culinary novice or a master chef, our spices will elevate your cooking to legendary status. Forget bland meals; we’re here to spice things up and make your food unforgettable.
+                </p>
+                <p class="mbr-text mbr-fonts-style display-7">
+                    Join us on this flavorful journey and discover the magic of spices. At Kalidas, we don’t just sell spices; we create culinary adventures that will leave you craving more!
+                </p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-5 image-wrapper">
+                <img class="w-100" src="https://r.mobirisesite.com/584238/assets/images/photo-1486548730767-5c679e8eda6b.jpeg" alt="Mobirise Website Builder">
+              </div>
+        </div>
+        </div>
+  </section>
+
+
+  <section class="metrics-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="card shadow-lg p-4">
+            <div class="row text-center">
+              <div class="col-12 col-md-4 mb-4">
+                <div class="card-body">
+                  <h2 class="display-3 text-orange font-weight-bold">100+</h2>
+                  <p class="h5">Spices Available</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <div class="card-body">
+                  <h2 class="display-3 text-orange font-weight-bold">50+</h2>
+                  <p class="h5">Dry Fruits Galore</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 mb-4">
+                <div class="card-body">
+                  <h2 class="display-3 text-orange font-weight-bold">10,000+</h2>
+                  <p class="h5">Happy Customers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <div class="faq-section">
+    <h2 class="faq-title text-center">FAQs</h2>
+    <p class="text-center">Find answers to frequently asked questions below.</p>
+    <div class="accordion" id="faqAccordion">
+      <div class="card" *ngFor="let item of faqItems; let i = index">
+        <div class="card-header" [attr.id]="'heading' + i">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" (click)="toggleCollapse(i)">
+              {{item.question}}
+            </button>
+          </h2>
+        </div>
+        <div [id]="'collapse' + i" class="collapse" [ngClass]="{'show': item.isOpen}" [attr.aria-labelledby]="'heading' + i" data-parent="#faqAccordion">
+          <div class="card-body">
+            {{item.answer}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="faq-footer text-center">
+      <p>Still have questions?</p>
+      <a routerLink="/contactUs" class="btn btn-primary">Contact</a>
+    </div>
+  </div>
+  

@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 120px); /* Adjust height to add margin from the top */
+    margin-top: 20px; /* Add margin from the top */
+}
+
+.contact-info {
+    background: #1a1a1a url('./../../../public/assets/images/logo\ for\ Kalidas\ Masala\ Center\,\ traders\ of\ all\ kinds\ of\ spices\ in\ wholesale\ and\ retail\ \(2\).png') no-repeat center center; /* Add your image path here */
+    background-size: cover; /* This will ensure the image covers the entire background */
+    color: #fff;
+    padding: 40px;
+    width: 35%; /* Adjust width to make the side image smaller */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.contact-info h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.contact-info p {
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+.contact-info a {
+    color: #00ff7f;
+    text-decoration: none;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 40px;
+    width: 65%; /* Adjust width to make the side image smaller */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.name-fields input {
+    width: 50%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+button {
+    background: #00ff7f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    align-self: center; /* Center the button */
+}
+
+button:hover {
+    background: #00e676;
+}

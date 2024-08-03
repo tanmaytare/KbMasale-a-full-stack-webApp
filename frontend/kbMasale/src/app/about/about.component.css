@@ -1,0 +1,48 @@
+.about-section {
+    background-color: #fcf6e4; /* Light beige color */
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.image-wrapper img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.text-wrapper {
+    padding: 20px;
+}
+.display-2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.display-7 {
+    font-size: 1rem;
+}
+
+.text-orange {
+    color: #f47c20; /* Orange color */
+  }
+  
+  .card {
+    border-radius: 10px; /* Rounded corners for the card */
+    background-color: #ffffff; /* White background for the card */
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  .faq-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+  }
+  .faq-title {
+    margin-bottom: 2rem;
+  }
+  .faq-footer {
+    margin-top: 2rem;
+  }
+  
