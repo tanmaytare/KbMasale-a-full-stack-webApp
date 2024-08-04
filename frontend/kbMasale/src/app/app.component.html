@@ -12,9 +12,14 @@
           <li routerLink="/products">Products</li>
         </ul>
       </div>
-      <div class="signup">
+      <div class="signup" *ngIf="!islogin">
         <button routerLink="/signUp">Sign Up</button>
       </div>
+
+      <div class="signup" *ngIf="islogin">
+        <button (click)="logOut()">Log Out</button>
+      </div>
+
       </header>
 <router-outlet></router-outlet>
 

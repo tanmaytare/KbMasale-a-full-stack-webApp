@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,18 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit{
+
+  islogin = false;
+  ngOnInit(): void {
+    if(localStorage.getItem("User")===null)
+    {
+      this.islogin = false;
+    }
+    else{
+      this.islogin =true;
+    }
+  }
 
     searchText:string="";
     count:number =0;
@@ -27,66 +38,66 @@ export class ProductsComponent {
   data= [
     {
       id: 1,
-      title: 'Allspices powder',
+      title: 'PISTACIO',
       price: 600,
       description: 'Allspices powder',
       category: 'powder',
-      image: '/assets/products/allspice-powder.png',
+      image: './assets/newProducts/pista/p04.png',
       available:true,
     },
     {
       id: 2,
-      title: 'Cinnamon Sticks Spice',
+      title: 'ALMONDS',
       price: 200,
       description: 'Cinnamon Sticks Spice',
       category: 'grounded',
-      image: '/assets/products/cinnamon-sticks-spice.png',
+      image: './assets/newProducts/almonds/a1.png',
       available:true,
     },
     {
       id: 3,
-      title: 'Dry Mint Leaves',
+      title: 'CASHEWS',
       price: 600,
       description: 'Dry Mint Leaves',
       category: 'grounded',
-      image: '/assets/products/dry-mint-leaves.png',
+      image: './assets/newProducts/cashew/c2.png',
       available:true,
     },
     {
       id: 4,
-      title: 'Fennel Seeds Spice',
+      title: 'WALNUT (AKHROAT)',
       price: 250,
       description: 'Fennel Seeds Spice',
       category: 'grounded',
-      image: '/assets/products/fennel-seeds-spice.png',
+      image: './assets/newProducts/wallnut/w1.png',
       available:true,
     },
     {
       id: 5,
-      title: 'Garam Masala',
+      title: 'DATES',
       price: 800,
-      description: 'Garam Masala',
+      description: 'DATES',
       category: 'seeds',
-      image: '/assets/products/garam-masala.png',
+      image: './assets/newProducts/dates/d1.png',
       available:true,
     },
     {
       id: 6,
-      title: 'Masala Seasonning',
+      title: 'RAISINS (KISHMISH)',
       price: 600,
       available:false,
       description: 'Masala Seasonning',
       category: 'seeds',
-      image: '/assets/products/masala-seasoning.png',
+      image: './assets/newProducts/raisins/r8.png',
     },
     {
       id: 7,
-      title: 'Mix Masala',
+      title: 'FIG (ANJEER)',
       price: 500,
       available:false,
-      description: 'Mix Masala',
+      description: 'FIG (ANJEER)',
       category: 'grounded',
-      image: '/assets/products/mix-masala.png',
+      image: './assets/newProducts/fig/f1.png',
     },
     {
       id: 8,
@@ -95,7 +106,7 @@ export class ProductsComponent {
       available:false,
       description: 'Oregano Spice',
       category: 'seeds',
-      image: '/assets/products/oregano-spice.png',
+      image: './assets/products/oregano-spice.png',
     },
     {
       id: 9,
@@ -104,7 +115,7 @@ export class ProductsComponent {
       available:true,
       description: 'Special Condiment',
       category: 'seeds',
-      image: '/assets/products/special-condiment.png',
+      image: './assets/products/special-condiment.png',
     },
     {
       id: 10,
@@ -113,7 +124,7 @@ export class ProductsComponent {
       description: 'Spice Tea',
       category: 'seeds',
       available:true,
-      image: '/assets/products/spice-tea.png',
+      image: './assets/products/spice-tea.png',
     },
     {
       id: 11,
@@ -122,7 +133,7 @@ export class ProductsComponent {
       description: 'Star Anise Powder Spices',
       category: 'seeds',
       available:true,
-      image: '/assets/products/star-anise-powder-spices.png',
+      image: './assets/products/star-anise-powder-spices.png',
     },
     {
       id: 12,
@@ -130,7 +141,7 @@ export class ProductsComponent {
       price: 500,
       description: 'Turmeric Spice Powder',
       category: 'seeds',
-      image: '/assets/products/turmeric-spice-powder.png',
+      image: './assets/products/turmeric-spice-powder.png',
       available:true,
     },
   ]

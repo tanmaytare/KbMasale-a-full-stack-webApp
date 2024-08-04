@@ -1,5 +1,71 @@
 .parent-container {
-    text-align: center; /* Centers the content horizontally */
-    margin-top: 15px;
-  }
-  
+  text-align: center;
+  margin-top: 15px;
+}
+
+.collection-img img {
+  width: 100%;
+}
+
+.rating i {
+  color: #008000 !important;
+}
+
+.title h2:hover {
+  color: #008000 !important;
+}
+
+.title h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.text-center p {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.text-center button {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.text-center a {
+  text-decoration: none;
+  color: green;
+}
+
+.text-center button:hover {
+  color: #ffffff;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-lg-3, .col-md-4, .col-sm-6, .col-12 {
+  max-width: 100%;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.collection-img img {
+  object-fit: contain;
+  height: 400px;
+  width: 100%;
+}
